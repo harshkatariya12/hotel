@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .hotel-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+        }
+        .hotel-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .booking-form {
+            display: none;
+            margin-top: 20px;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+        }
+        .login-form input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showMainPage() {
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('main').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+<div id="login">
+    <header>
+        <h1>Login to Hotel Booking Platform</h1>
+    </header>
+    <div class="container">
+        <form class="login-form" onsubmit="showMainPage(); return false;">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="button">Login</button>
+        </form>
+    </div>
+</div>
+
+<div id="main" style="display: none;">
+    <header>
+        <h1>Hotel Booking Platform</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#hotels">Hotel Listings</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="container" id="home">
+        <h2>Welcome to Our Hotel Booking Platform</h2>
+        <p>Find and book your perfect hotel room with ease!</p>
+    </div>
+
+    <div class="container" id="hotels">
+        <h2>Hotel Listings</h2>
+        <div class="hotel-card">
+            <img src="image.png" alt="Hotel 1">
+            <h3>Hotel 1</h3>
+            <p>Price: $100/night</p>
+            <button class="button" onclick="showBookingForm('Hotel 1', 100)">Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="image1.png" alt="Hotel 2">
+            <h3>Hotel 2</h3>
+            <p>Price: $120/night</p>
+            <button class="button" onclick="showBookingForm('Hotel 2', 120)">Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="image2.png" alt="Hotel 3">
+            <h3>Hotel 3</h3>
+            <p>Price: $90/night</p>
+            <button class="button" onclick="showBookingForm('Hotel 3', 90)">Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="image3.png" alt="Hotel 3">
+            <h3>Hotel 4</h3>
+            <p>Price: $110/night</p>
+            <button class="button" onclick="showBookingForm('Hotel 3', 90)">Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="image4.png" alt="Hotel 3">
+            <h3>Hotel 5</h3>
+            <p>Price: $90/night</p>
+            <button class="button" onclick="showBookingForm('Hotel 3', 90)">Book Now</button>
+        </div>
+        <div class="hotel-card">
+            <img src="image5.png" alt="Hotel 3">
+            <h3>Hotel 6</h3>
+            <p>Price: $100/night</p>
+            <button class="button" onclick="showBookingForm('Hotel 3', 90)">Book Now</button>
+        </div>
+        </div>
+</div>
+</body>
+</html>
+        
